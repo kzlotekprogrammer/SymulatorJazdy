@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymulatorJazdy", "SymulatorJazdy\SymulatorJazdy.csproj", "{159CB7EE-CD41-420D-B485-9AE3B077337F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{159CB7EE-CD41-420D-B485-9AE3B077337F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159CB7EE-CD41-420D-B485-9AE3B077337F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159CB7EE-CD41-420D-B485-9AE3B077337F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159CB7EE-CD41-420D-B485-9AE3B077337F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94658404-59CB-414D-B244-6F8A475261CC}
+	EndGlobalSection
+EndGlobal
