@@ -22,11 +22,11 @@ namespace SymulatorJazdy
 
         static void Main(string[] args)
         {
-            MainWindow = new RenderWindow(VideoMode.DesktopMode, "Hello world!");
+            MainWindow = new RenderWindow(VideoMode.DesktopMode, "Symulator jazdy");
 
             //levels
             Levels = LevelsManager.AllLevels();
-            CurrentLevelIndex = 0;
+            CurrentLevelIndex = 4;
             if(Levels.Count <= 0)
             {
                 return;
@@ -97,8 +97,18 @@ namespace SymulatorJazdy
                     ShowMessage(CurrentLevel.PlayerObject.MessageToShow);
                 }
 
+                ShowLevelInfo();
+
                 MainWindow.Display();
             }
+        }
+
+        private static void ShowLevelInfo()
+        {
+            Text levelInfo = new Text("Poziom " + (CurrentLevelIndex + 1), FontsManager.Default);
+            levelInfo.FillColor = Color.Black;
+            levelInfo.Position = new Vector2f(CurrentView.Center.X - VideoMode.DesktopMode.Width / 2 + 10, CurrentView.Center.Y + VideoMode.DesktopMode.Height / 2 - 200);
+            MainWindow.Draw(levelInfo);
         }
 
         private static void ShowInteraction(Interaction currentInteraction)
@@ -165,6 +175,32 @@ namespace SymulatorJazdy
                 else if (e.Code == Keyboard.Key.Num2)
                 {
                     if (interaction.CorrectIndex == 1)
+                    {
+                        GameStopped = false;
+                    }
+                    else
+                    {
+                        CurrentLevel.PlayerObject.MessageToShow = "Błędna odpowiedź. Naciśnij R aby zrestartować poziom";
+                    }
+
+                    CurrentLevel.PlayerObject.CurrentInteraction = null;
+                }
+                else if (e.Code == Keyboard.Key.Num3)
+                {
+                    if (interaction.CorrectIndex == 2)
+                    {
+                        GameStopped = false;
+                    }
+                    else
+                    {
+                        CurrentLevel.PlayerObject.MessageToShow = "Błędna odpowiedź. Naciśnij R aby zrestartować poziom";
+                    }
+
+                    CurrentLevel.PlayerObject.CurrentInteraction = null;
+                }
+                else if (e.Code == Keyboard.Key.Num4)
+                {
+                    if (interaction.CorrectIndex == 3)
                     {
                         GameStopped = false;
                     }

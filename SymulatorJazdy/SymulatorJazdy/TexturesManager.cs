@@ -19,6 +19,9 @@ namespace SymulatorJazdy
         private static Texture _grass;
         private static Texture _road4Cross;
         private static Texture _roadHorizontal;
+        private static Texture _carTexture3;
+        private static Texture _carTexture4;
+        private static Texture _ambulanceTexture;
 
         public static Texture RoadVerticalTile
         {
@@ -79,6 +82,43 @@ namespace SymulatorJazdy
                 return _carTexture2;
             }
         }
+
+        public static Texture CarTexture3
+        {
+            get
+            {
+                if (_carTexture3 == null)
+                {
+                    _carTexture3 = new Texture(String.Format(CarTextureFilePath, 3));
+                }
+                return _carTexture3;
+            }
+        }
+
+        public static Texture CarTexture4
+        {
+            get
+            {
+                if (_carTexture4 == null)
+                {
+                    _carTexture4 = new Texture(String.Format(CarTextureFilePath, 4));
+                }
+                return _carTexture4;
+            }
+        }
+
+        public static Texture AmbulanceTexture
+        {
+            get
+            {
+                if (_ambulanceTexture == null)
+                {
+                    _ambulanceTexture = new Texture("textures/Ambulance.png");
+                }
+                return _ambulanceTexture;
+            }
+        }
+
 
         public static Texture Grass
         {
