@@ -61,6 +61,12 @@ namespace SymulatorJazdy
             cross.ObjectSprite.Position = new Vector2f(0, -TexturesManager.TileSize.Y * y);
             visualObjects.Add(cross);
 
+            VisualObject sign = new VisualObject();
+            sign.ObjectSprite = new Sprite(TexturesManager.CrossSign);
+            sign.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
+            sign.ObjectSprite.Position = new Vector2f(TexturesManager.TileSize.X * (x+1), -TexturesManager.TileSize.Y * (y - 1));
+            visualObjects.Add(sign);
+
             Trigger interactionTrigger = new Trigger(player, cross.ObjectSprite.GetGlobalBounds(), new List<VisualObject>() { player },
             new Action<List<VisualObject>>(x =>
             {
@@ -169,6 +175,12 @@ namespace SymulatorJazdy
             cross.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
             cross.ObjectSprite.Position = new Vector2f(0, -TexturesManager.TileSize.Y * y);
             visualObjects.Add(cross);
+
+            VisualObject sign = new VisualObject();
+            sign.ObjectSprite = new Sprite(TexturesManager.CrossSign);
+            sign.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
+            sign.ObjectSprite.Position = new Vector2f(TexturesManager.TileSize.X * (x + 1), -TexturesManager.TileSize.Y * (y - 1));
+            visualObjects.Add(sign);
 
             Trigger interactionTrigger = new Trigger(player, cross.ObjectSprite.GetGlobalBounds(), new List<VisualObject>() { player, carRight },
             new Action<List<VisualObject>>(x =>
@@ -290,6 +302,12 @@ namespace SymulatorJazdy
             cross.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
             cross.ObjectSprite.Position = new Vector2f(0, -TexturesManager.TileSize.Y * y);
             visualObjects.Add(cross);
+
+            VisualObject sign = new VisualObject();
+            sign.ObjectSprite = new Sprite(TexturesManager.CrossSign);
+            sign.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
+            sign.ObjectSprite.Position = new Vector2f(TexturesManager.TileSize.X * (x + 1), -TexturesManager.TileSize.Y * (y - 1));
+            visualObjects.Add(sign);
 
             Trigger interactionTrigger = new Trigger(player, cross.ObjectSprite.GetGlobalBounds(), new List<VisualObject>() { player, carRight },
             new Action<List<VisualObject>>(x =>
@@ -425,6 +443,12 @@ namespace SymulatorJazdy
             cross.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
             cross.ObjectSprite.Position = new Vector2f(0, -TexturesManager.TileSize.Y * y);
             visualObjects.Add(cross);
+
+            VisualObject sign = new VisualObject();
+            sign.ObjectSprite = new Sprite(TexturesManager.CrossSign);
+            sign.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
+            sign.ObjectSprite.Position = new Vector2f(TexturesManager.TileSize.X * (x + 1), -TexturesManager.TileSize.Y * (y - 1));
+            visualObjects.Add(sign);
 
             Trigger interactionTrigger = new Trigger(player, cross.ObjectSprite.GetGlobalBounds(), new List<VisualObject>() { player, carTop },
             new Action<List<VisualObject>>(x =>
@@ -583,6 +607,12 @@ namespace SymulatorJazdy
             cross.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
             cross.ObjectSprite.Position = new Vector2f(0, -TexturesManager.TileSize.Y * y);
             visualObjects.Add(cross);
+
+            VisualObject sign = new VisualObject();
+            sign.ObjectSprite = new Sprite(TexturesManager.CrossSign);
+            sign.ObjectSprite.Origin = new Vector2f(TexturesManager.TileSize.X / 2, TexturesManager.TileSize.Y / 2);
+            sign.ObjectSprite.Position = new Vector2f(TexturesManager.TileSize.X * (x + 1), -TexturesManager.TileSize.Y * (y - 1));
+            visualObjects.Add(sign);
 
             Trigger interactionTrigger = new Trigger(player, cross.ObjectSprite.GetGlobalBounds(), new List<VisualObject>() { player, ambulance },
             new Action<List<VisualObject>>(x =>

@@ -22,6 +22,7 @@ namespace SymulatorJazdy
         private static Texture _carTexture3;
         private static Texture _carTexture4;
         private static Texture _ambulanceTexture;
+        private static Texture _crossSign;
 
         public static Texture RoadVerticalTile
         {
@@ -129,6 +130,18 @@ namespace SymulatorJazdy
                     _grass = new Texture(RoadTileSheetFilePath, new IntRect(0, TileSize.Y*2, TileSize.X, TileSize.Y));
                 }
                 return _grass;
+            }
+        }
+
+        public static Texture CrossSign
+        {
+            get
+            {
+                if(_crossSign == null)
+                {
+                    _crossSign = new Texture("textures/sign.png");
+                }
+                return _crossSign;
             }
         }
     }

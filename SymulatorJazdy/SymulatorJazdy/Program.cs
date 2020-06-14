@@ -26,7 +26,7 @@ namespace SymulatorJazdy
 
             //levels
             Levels = LevelsManager.AllLevels();
-            CurrentLevelIndex = 4;
+            CurrentLevelIndex = 0;
             if(Levels.Count <= 0)
             {
                 return;
