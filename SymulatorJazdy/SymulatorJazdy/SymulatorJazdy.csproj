@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,5 +8,13 @@
   <ItemGroup>
     <PackageReference Include="SFML.Net" Version="2.5.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="fonts\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if not exist &quot;$(ProjectDir)$(OutDir)textures&quot; mkdir &quot;$(ProjectDir)$(OutDir)textures&quot;&#xD;&#xA;&#xD;&#xA; copy &quot;$(ProjectDir)textures\&quot;  &quot;$(ProjectDir)$(OutDir)textures\&quot;&#xD;&#xA;&#xD;&#xA;if not exist &quot;$(ProjectDir)$(OutDir)fonts&quot; mkdir &quot;$(ProjectDir)$(OutDir)fonts&quot;&#xD;&#xA;&#xD;&#xA; copy &quot;$(ProjectDir)fonts\&quot;  &quot;$(ProjectDir)$(OutDir)fonts\&quot;" />
+  </Target>
 
 </Project>
